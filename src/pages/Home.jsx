@@ -111,7 +111,7 @@ const Home = () => {
               </div>
               <div className={`relative w-[240px] md:w-[180px] h-[50px] md:h-full`}>
                 <div onClick={() => setToggle(!toggle)} className={`cursor-pointer h-full px-6 shadow-md text-sm rounded-md duration-300 flex items-center ${isDarkMode ? 'bg-[#313a44] text-gray-100' : 'bg-white text-gray-900'}`}>
-                  <p>Filter by Region </p>
+                  <p className='capitalize'>{filter ? ("Region: " + filter) : "Filter by Region"} </p>
                   <RiArrowDropDownLine className={`absolute right-4 text-2xl duration-300 ${toggle && "rotate-180"}`} />
                 </div>
                 <div className={`absolute top-14 z-10 left-0 w-full border-gray-500 shadow-md duration-300 overflow-hidden rounded-md ${isDarkMode ? 'bg-[#313a44] text-gray-100' : 'bg-white text-gray-900'} ${toggle ? 'h-[200px] border' : 'h-0'}`}>
